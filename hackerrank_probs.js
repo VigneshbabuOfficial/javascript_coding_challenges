@@ -1,22 +1,23 @@
 // hackerrank problems
 
-// ------------- APR-20,2024 ----------------
-// Bill Division :
-// https://www.hackerrank.com/challenges/bon-appetit/problem?isFullScreen=true
+// ------------- MAY-02,2024 ----------------
+// The Hurdle Race :
+// https://www.hackerrank.com/challenges/the-hurdle-race/problem?isFullScreen=true
 // Difficulty : EASY
 // status : SUCCESS
-console.log("----- Bill Division *** begins ------- ");
-bonAppetit();
-console.log("----- Bill Division *** ends ------- ");
+console.log("----- The Hurdle Race *** begins ------- ");
+hurdleRace();
+console.log("----- The Hurdle Race *** ends ------- ");
 
-function bonAppetit() {
-    let billItems = [3, 10, 2, 9];
-	let billAnnaNoNeedToPay = 1; // 0 based index
-	let annaCharged = 12;
-    bonAppetit(billItems, billAnnaNoNeedToPay, annaCharged);
-    bonAppetit(billItems, billAnnaNoNeedToPay, 7);
+function hurdleRace() {
+    hurdleRace_soln(1, [1, 2, 3, 3, 2]);
+    hurdleRace_soln(4, [1, 6, 3, 5, 2]);
+    hurdleRace_soln(7, [2, 5, 4, 5, 2]);
 }
 
-function bonAppetit(bill, k, b) {
-
+function hurdleRace_soln(k, arr) {
+    const maxNumber = Math.max(...arr);
+    const requiredDose = maxNumber - k > 0 ? maxNumber - k  : 0;
+    console.log(" requiredDose = "+requiredDose);
+    return requiredDose;
 }
